@@ -7,11 +7,11 @@ public class Bedroom extends Room {
 
     private String name;
     private Bed bed;
-    private LampType lamp;
+    private Lamp lamp;
     private Wardrobe wardrobe;
     private Carpet carpet;
 
-    public Bedroom(Wall wall1, Wall wall2, Wall wall3, Wall wall4, Ceiling ceiling, String name, Bed bed, LampType lamp, Wardrobe wardrobe, Carpet carpet) {
+    public Bedroom(Wall wall1, Wall wall2, Wall wall3, Wall wall4, Ceiling ceiling, String name, Bed bed, Lamp lamp, Wardrobe wardrobe, Carpet carpet) {
         super(wall1, wall2, wall3, wall4, ceiling);
         this.name = name;
         this.bed = bed;
@@ -28,7 +28,7 @@ public class Bedroom extends Room {
         return bed;
     }
 
-    public LampType getLamp() {
+    public Lamp getLamp() {
         return lamp;
     }
 
@@ -38,6 +38,19 @@ public class Bedroom extends Room {
 
     public Carpet getCarpet() {
         return carpet;
+    }
+
+    public void createBedroom() {
+        super.getWall1().create();
+        super.getWall2().create();
+        super.getWall3().create();
+        super.getWall4().create();
+        super.getCeiling().create();
+
+        bed.make();
+        carpet.lying();
+        wardrobe.add();
+        lamp.turnOn();
     }
 
     @Override

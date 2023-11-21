@@ -39,4 +39,19 @@ public class Bedroom extends Room {
     public Carpet getCarpet() {
         return carpet;
     }
+
+    @Override
+    public String toString() {
+        return "Bedroom{" +
+                "name='" + name + '\'' +
+                ", bed=" + bed +
+                ", lamp=" + lamp +
+                ", wardrobe=" + wardrobe +
+                ", carpet=" + carpet +
+                ", wall1=" + getWall1() +
+                ", wall2=" + getWall2() +
+                ", wall3=" + getWall3() +
+                ", wall4=" + getWall4() +
+                '}';
+    }
 }

@@ -4,7 +4,7 @@ public class Wardrobe {
 
     private int width;
     private int heigth;
-    double weight;
+    private double weight;
 
     public Wardrobe(int width, int heigth, double weight) {
         this.width = width;
@@ -26,5 +26,14 @@ public class Wardrobe {
 
     public void add() {
         System.out.println("Wardrobe added to into Bedroom");
+    }
+
+    @Override
+    public String toString() {
+        return "Wardrobe{" +
+                "width=" + width +
+                ", heigth=" + heigth +
+                ", weight=" + weight +
+                '}';
     }
 }

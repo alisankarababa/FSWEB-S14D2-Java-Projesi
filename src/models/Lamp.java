@@ -1,6 +1,8 @@
 package models;
 import enums.LampType;
 
+import java.util.Scanner;
+
 public class Lamp {
 
     private LampType style;
@@ -27,5 +29,14 @@ public class Lamp {
 
     public int getGlobRating() {
         return globRating;
+    }
+
+    @Override
+    public String toString() {
+        return "Lamp{" +
+                "style=" + style +
+                ", battery=" + battery +
+                ", globRating=" + globRating +
+                '}';
     }
 }
